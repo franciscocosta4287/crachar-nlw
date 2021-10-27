@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    --black: hsl(240, 6%, 13%);
+    /*variavel*/
+    --gray: hsl(240, 9%, 89%);
+    /*variavel*/
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /* em navegadoes -webkit | google chrome, safari*/
+}
+
+body {
+    display: grid;
+    /* height: 100%; */
+    place-items: center;
+    /* background: lightblue; */
+}
+
+main {
+    background: url(images/mobilexxx.png);
+    width: 375px;
+    height: 812px;
+}
+
+.container {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /*Variavel*/
+    color: var(--gray);
+}
+
+.avatar {
+    width: 10rem;
+    /*160px / 10 = 10rem*/
+    margin: 11.5rem auto 0;
+    position: relative;
+}
+
+.avatar span {
+    position: absolute;
+    top: -15px;
+    z-index: 1;
+    /*Img ficar em cima*/
+}
+
+.avatar>img {
+    /*width: 50%;  lagura*/
+    width: 10rem;
+    height: 11.5rem;
+    /*se adequando a lergura e altura*/
+    object-fit: cover;
+    /*Img poligono*/
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    /*https://bennettfeely.com/clippy/*/
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+a {
+    color: var(--gray);
+    text-decoration: none;
+    margin-top: 0.25rem;
+    /*Alinhando itens*/
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    /*Garantia de que realmente estão alinhado ao centro*/
+}
+
+p {
+    margin-top: 2rem;
+}
+
+ul {
+    margin-top: 4rem;
+    /*Tirando os pontinhos*/
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /*Elementos um do lado do outro | no eixo main  */
+    gap: 0.5rem;
+    /*Espacos entre os elementos*/
+    justify-content: center;
+    /*Alinhamento central por causa do flx|  */
+}
